@@ -37,7 +37,7 @@ describe('when there is initially some blogs saved', () => {
   test('id field is id and not _id', async () => {
     const response = await api.get('/api/blogs')
     response.body.forEach(blog => {
-      expect(blog.id).toBeDefined()
+      expect(blog.id).toBeDefined() 
     })
   })
   describe('HTML POST tests', () => {
