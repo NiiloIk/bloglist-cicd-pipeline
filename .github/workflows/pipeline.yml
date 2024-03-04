@@ -25,6 +25,12 @@ jobs:
 
           - name: build
             run: npm run build:ui
+
+          - name: start test server
+            run: npm run start:test &
+
+          - name: Wait for Server to be Ready
+            run: wait-on http://localhost:3003
         
           - name: test
             run: npm run test
