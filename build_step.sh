@@ -2,15 +2,13 @@
 
 echo "Build script"
 
-cd bloglist-frontend
-echo "npm install in frontend"
 ls
 npm install
 
+cd ./bloglist-frontend
+npm install
+npm run build 
+cp -r dist ../ 
 cd ..
-echo "listing after frontend install"
-ls
 
-npm install
-npm run build:ui
 npm run start
