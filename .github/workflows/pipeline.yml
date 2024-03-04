@@ -62,7 +62,6 @@ jobs:
       steps:
         - name: Checkout code
           uses: actions/checkout@v4
-          
         - name: Bump version and push tag
           uses: anothrNick/github-tag-action@a2c70ae13a881faf2b4953baaa9e49731997ab36
           env:
