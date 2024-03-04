@@ -49,3 +49,4 @@ jobs:
           uses: anothrNick/github-tag-action@a2c70ae13a881faf2b4953baaa9e49731997ab36
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            DEFAULT_BUMP: patch
