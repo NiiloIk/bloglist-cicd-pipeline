@@ -2,8 +2,7 @@ module.exports = {
   'env': {
     'es6': true,
     'jest/globals': true,
-    'node': true,
-    'cypress/globals': true,
+    'node': true
   },
   'settings': {
     'react': {
@@ -22,7 +21,7 @@ module.exports = {
     'sourceType': 'module'
   },
   'plugins': [
-    'react', 'jest', 'cypress'
+    'react', 'jest'
   ],
   'rules': {
     'indent': [
