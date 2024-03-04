@@ -11,6 +11,11 @@ on:
 jobs:
     simple_deployment_pipeline:
         runs-on: ubuntu-20.04
+        env:
+          SECRET: ${{ secrets.SECRET }}
+          TEST_MONGODB_URI: ${{ secrets.TEST_MONGODB_URI }}
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          PORT: ${{ secrets.PORT }}
         steps:
           - uses: actions/checkout@v4
           - uses: actions/setup-node@v4
@@ -25,9 +30,6 @@ jobs:
 
           - name: build
             run: npm run build:ui
-
-          - name: start test server
-            run: npm run start:test &
         
           - name: test
             run: npm run test
