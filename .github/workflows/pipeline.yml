@@ -27,8 +27,4 @@ jobs:
             run: npm run build:ui
         
           - name: test
-            run: npm run start:test &
-            background: true
-        
-          - name: test
             run: npm run test
