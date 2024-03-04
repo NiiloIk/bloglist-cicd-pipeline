@@ -6,7 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node index",
     "dev": "cross-env NODE_ENV=development nodemon index.js",
-    "build:ui": "rm -rf dist && cd ./bloglist-frontend && npm install && npm run build && cp -r dist ../ && cd ..",
+    "build:ui": "cd ./bloglist-frontend && npm install && npm run build && cp -r dist ../ && cd ..",
     "build:ui:windows": "@powershell Remove-Item -Recurse -Force dist && cd ./bloglist-frontend && npm install && npm run build && @powershell Copy-Item dist -Recurse ../",
     "eslint": "eslint .",
     "test": "cross-env NODE_ENV=test jest tests/ --verbose --runInBand",

@@ -1,7 +1,6 @@
 #!/bin/bash
 
 echo "Build script"
-echo "listing start"
 
 cd bloglist-frontend
 echo "npm install in frontend"
